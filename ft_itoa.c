@@ -6,7 +6,7 @@
 /*   By: jvan-ges <jvan-ges@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 16:22:52 by jvan-ges          #+#    #+#             */
-/*   Updated: 2026/10/15 16:22:52 by jvan-ges         ###   ########.fr       */
+/*   Updated: 2026/10/21 16:54:35 by jvan-ges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,24 +30,24 @@ char	*ft_itoa(int n)
 	char	*res;
 	long	nb;
 	size_t	len;
-	size_t	neg;
 
 	nb = n;
-	neg = (n < 0);
-	if (neg)
+	if (nb < 0)
 		nb = -nb;
-	len = num_len(nb) + neg;
+	len = num_len(nb);
+	if (n < 0)
+		len++;
 	res = malloc(len + 1);
-	if (!res)
+	if (res == NULL)
 		return (NULL);
 	res[len] = '\0';
-	if (neg)
-		res[0] = '-';
-	while (len > neg)
+	while (len > 0)
 	{
 		len--;
-		res[len] = nb % 10 + '0';
+		res[len] = (nb % 10) + '0';
 		nb /= 10;
 	}
+	if (n < 0)
+		res[0] = '-';
 	return (res);
 }
