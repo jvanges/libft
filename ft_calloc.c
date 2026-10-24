@@ -6,7 +6,7 @@
 /*   By: jvan-ges <jvan-ges@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 16:22:52 by jvan-ges          #+#    #+#             */
-/*   Updated: 2026/10/15 16:22:52 by jvan-ges         ###   ########.fr       */
+/*   Updated: 2026/10/24 17:25:35 by jvan-ges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*p;
+	size_t	total;
 
-	if (nmemb && size > (size_t)-1 / nmemb)
+	total = nmemb * size;
+	if (nmemb != 0 && total / nmemb != size)
 		return (NULL);
-	p = malloc(nmemb * size);
+	p = malloc(total);
 	if (!p)
 		return (NULL);
-	ft_bzero(p, nmemb * size);
+	ft_bzero(p, total);
 	return (p);
 }
