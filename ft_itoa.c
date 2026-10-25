@@ -6,11 +6,24 @@
 /*   By: jvan-ges <jvan-ges@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 16:22:52 by jvan-ges          #+#    #+#             */
-/*   Updated: 2026/10/25 10:24:37 by jvan-ges         ###   ########.fr       */
+/*   Updated: 2026/10/25 19:52:00 by jvan-ges         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	count_len(long nb)
+{
+	size_t	len;
+
+	len = 1;
+	while (nb >= 10)
+	{
+		nb /= 10;
+		len++;
+	}
+	return (len);
+}
 
 char	*ft_itoa(int n)
 {
@@ -19,13 +32,9 @@ char	*ft_itoa(int n)
 	size_t	len;
 
 	nb = n;
-	len = 1;
 	if (nb < 0)
 		nb = -nb;
-	while (nb >= 10 && ++len)
-		nb /= 10;
-	if (n < 0)
-		len++;
+	len = count_len(nb) + (n < 0);
 	res = malloc(len + 1);
 	if (!res)
 		return (NULL);
