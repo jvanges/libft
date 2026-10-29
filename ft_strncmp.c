@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*
+** Compares at most n characters of s1 and s2. Characters are compared
+** as unsigned char (so bytes above 127 sort correctly).
+** Returns 0 if the first n characters match, otherwise the difference
+** of the first differing pair.
+*/
+
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

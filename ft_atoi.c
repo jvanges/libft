@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/*
+** Converts the beginning of the string nptr to an int.
+** Skips leading whitespace (' ' and '\t'-'\r'), accepts an optional sign,
+** then reads digits. 'res' is a long so that the multiplication does not
+** overflow before the value is cast back to int; like the real atoi,
+** the result is undefined if it does not fit in an int.
+*/
+
 int	ft_atoi(const char *nptr)
 {
 	int		i;

@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+** Returns a newly allocated string where each character is f(index, c)
+** applied to the characters of s (unlike ft_striteri, s is untouched).
+** Returns NULL if malloc fails or if s/f is NULL.
+*/
+
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*res;

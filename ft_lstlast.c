@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Returns the last node of the list (the one whose next is NULL),
+** or NULL if the list is empty.
+*/
+
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)

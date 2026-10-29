@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+** Returns a pointer to the LAST occurrence of c (converted to char)
+** in s, or NULL. Like ft_strchr, the '\0' can be searched: the first
+** loop lands on it, and scanning backward from there handles it.
+*/
+
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;

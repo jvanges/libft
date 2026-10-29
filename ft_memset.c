@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Writes the byte c (converted to unsigned char) to the first n bytes
+** of s. Returns s.
+*/
+
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t			i;

@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/*
+** Returns a newly allocated substring of s: at most len characters,
+** starting at index 'start'.
+** If start is past the end of s, an empty string is returned.
+** len is clamped (len > slen - start) so only what is actually needed
+** is allocated, never more.
+** Returns NULL if s is NULL or if malloc fails.
+*/
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;

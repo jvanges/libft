@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+** Returns 1 if c is in the 7-bit ASCII range (0 to 127), 0 otherwise.
+*/
+
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)

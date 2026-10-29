@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Returns the number of characters in s, not counting the
+** terminating '\0'.
+*/
+
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;

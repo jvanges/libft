@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Returns 1 if c is a letter or a digit, 0 otherwise.
+** Reuses ft_isalpha and ft_isdigit.
+*/
+
 int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))

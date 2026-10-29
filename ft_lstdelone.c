@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+** Frees the content of the node lst with the del function, then frees
+** the node itself. The 'next' node is untouched, as required by the
+** subject. Does nothing if lst or del is NULL.
+*/
+
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (!lst || !del)

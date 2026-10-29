@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/*
+** Locates the first occurrence of little in big, searching at most len
+** bytes. An empty little returns big unchanged.
+** "i + j < len" in the inner loop ensures the candidate match never
+** reads past the len boundary.
+** Returns a pointer to the match, or NULL if the full little would
+** extend past len.
+*/
+
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;

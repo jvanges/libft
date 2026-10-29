@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Allocates a new node storing 'content'; 'next' is set to NULL.
+** Returns NULL if malloc fails.
+*/
+
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*node;

@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+** Compares the first n bytes of s1 and s2 as unsigned chars.
+** Returns 0 if equal, otherwise the difference of the first differing
+** bytes (a[i] - b[i]), negative if s1 < s2, positive if s1 > s2.
+*/
+
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t			i;

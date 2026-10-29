@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*
+** Writes the integer n to fd. n is promoted to long so that -nb is
+** safe even for INT_MIN. Digits come out left-to-right thanks to the
+** recursion: the higher digits are printed by the recursive call before
+** the current last digit.
+*/
+
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	nb;

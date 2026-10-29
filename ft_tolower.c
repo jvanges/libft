@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+** Returns the lowercase version of c if it is an uppercase ASCII letter
+** ('A'-'Z' are 32 apart from 'a'-'z' in ASCII); returns c unchanged
+** otherwise.
+*/
+
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')

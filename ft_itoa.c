@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Counts the number of decimal digits of nb (taken positive).
+** len starts at 1 so that 0 is handled correctly.
+*/
+
 static size_t	count_len(long nb)
 {
 	size_t	len;
@@ -24,6 +29,14 @@ static size_t	count_len(long nb)
 	}
 	return (len);
 }
+
+/*
+** Converts the integer n to a newly allocated, NUL-terminated string.
+** n is handled as a long: -n would overflow for INT_MIN (-2147483648)
+** as an int. Digits are written from the end of the string toward the
+** beginning, so no reversal is needed; the '-' (if any) lands at index 0.
+** Returns NULL if malloc fails.
+*/
 
 char	*ft_itoa(int n)
 {

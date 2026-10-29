@@ -17,6 +17,12 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+/*
+** Node of a singly linked list: 'content' is generic (void *), the
+** caller is responsible for what it points to (and for freeing it,
+** typically via the del() function passed to ft_lstdelone/ft_lstclear).
+*/
+
 typedef struct s_list
 {
 	void			*content;

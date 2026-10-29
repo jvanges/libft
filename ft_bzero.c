@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Sets the first n bytes of s to zero. Simply delegates to ft_memset
+** with value 0; nothing is returned.
+*/
+
 void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);

@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Returns a newly allocated copy of s (len + 1 for the '\0').
+** Returns NULL if malloc fails. The result must be freed by the caller.
+*/
+
 char	*ft_strdup(const char *s)
 {
 	char	*dup;

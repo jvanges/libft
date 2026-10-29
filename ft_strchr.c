@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*
+** Returns a pointer to the first occurrence of c (converted to char)
+** in s, or NULL. The terminating '\0' is part of the string, so
+** ft_strchr(s, 0) correctly returns a pointer to it: this is why the
+** second test after the loop (s[i] == c) is needed.
+*/
+
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;

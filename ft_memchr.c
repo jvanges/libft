@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Scans the first n bytes of s for the byte c (compared as unsigned char).
+** Returns a pointer to the matching byte, or NULL if not found.
+*/
+
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;

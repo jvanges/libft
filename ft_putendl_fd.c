@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Writes the string s to fd, followed by a newline.
+** Does nothing if s is NULL.
+*/
+
 void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)

@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/*
+** Returns a newly allocated copy of s1 stripped of the characters of
+** 'set' at both ends (characters inside the string are kept).
+** "end > start" in the second loop stops the trimming when the whole
+** string is made of set characters (resulting in an empty string).
+** The extraction itself is delegated to ft_substr.
+*/
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;

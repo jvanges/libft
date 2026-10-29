@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+** Returns 1 if c is a decimal digit ('0'-'9'), 0 otherwise.
+*/
+
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')

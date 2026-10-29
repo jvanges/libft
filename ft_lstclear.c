@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*
+** Deletes and frees the node *lst and all its successors using del
+** (on each content) and free (on each node). The next pointer is saved
+** before each free. The loop ends with *lst == NULL, as required.
+** Does nothing if lst or del is NULL.
+*/
+
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;

@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+/*
+** Returns a newly allocated string holding the concatenation of s1
+** and s2. Returns NULL if malloc fails.
+** The second memcpy copies l2 + 1 bytes to include the '\0' of s2.
+** Defensive NULL check on s1/s2.
+*/
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*res;

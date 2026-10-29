@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Counts the words of s, c being the delimiter; runs of c do not create
+** empty words, so "  a  b " counts as 2.
+*/
+
 static size_t	count_words(char const *s, char c)
 {
 	size_t	count;
@@ -32,6 +37,12 @@ static size_t	count_words(char const *s, char c)
 	return (count);
 }
 
+/*
+** Frees the i strings already allocated, then the array itself.
+** Used when an allocation fails halfway through ft_split, so nothing
+** leaks and NULL can safely be returned.
+*/
+
 static void	free_all(char **tab, size_t i)
 {
 	while (i > 0)
@@ -41,6 +52,11 @@ static void	free_all(char **tab, size_t i)
 	}
 	free(tab);
 }
+
+/*
+** Advances *pos past the delimiters, then extracts the next word with
+** ft_substr, leaving *pos right after it for the following call.
+*/
 
 static char	*next_word(char const *s, char c, size_t *pos)
 {
@@ -55,6 +71,13 @@ static char	*next_word(char const *s, char c, size_t *pos)
 	len = *pos - start;
 	return (ft_substr(s, start, len));
 }
+
+/*
+** Splits s into a NULL-terminated array of strings using c as delimiter.
+** +1 slot in the malloc makes room for the terminating NULL.
+** On any allocation failure, everything allocated so far is freed
+** (free_all) and NULL is returned.
+*/
 
 char	**ft_split(char const *s, char c)
 {

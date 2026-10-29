@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/*
+** Copies src into dst, writing at most size - 1 characters and always
+** NUL-terminating when size > 0 ("i < size - 1" reserves the '\0' slot).
+** When size == 0, dst is left untouched.
+** Returns the full length of src: comparing the return value with size
+** tells whether the copy was truncated.
+*/
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;

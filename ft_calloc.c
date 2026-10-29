@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/*
+** Allocates memory for an array of nmemb elements of size bytes each and
+** zero-initializes it (via ft_bzero).
+** The "total / nmemb != size" check detects integer overflow of the
+** nmemb * size multiplication, which malloc itself would not see.
+** Returns NULL on overflow or on allocation failure.
+*/
+
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*p;

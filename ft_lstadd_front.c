@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+** Adds the node 'new' at the beginning of the list: it first points to
+** the old head, then becomes the new head through *lst.
+** Does nothing if lst or new is NULL.
+*/
+
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst || !new)

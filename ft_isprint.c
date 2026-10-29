@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+** Returns 1 if c is a printable ASCII character (32 to 126, space
+** included), 0 otherwise.
+*/
+
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)

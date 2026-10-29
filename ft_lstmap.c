@@ -12,6 +12,14 @@
 
 #include "libft.h"
 
+/*
+** Builds a new list by applying f to the content of each node of lst.
+** The original list is never modified.
+** If any allocation fails, the result of f() for that node is freed
+** with del (so its content is not leaked) and the partially built list
+** is destroyed with ft_lstclear before returning NULL.
+*/
+
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*head;

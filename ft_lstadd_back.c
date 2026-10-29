@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+** Adds the node 'new' at the end of the list. lst is a pointer to the
+** first link so that the head can be updated when the list is empty.
+** Does nothing if lst or new is NULL.
+*/
+
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	if (!lst || !new)

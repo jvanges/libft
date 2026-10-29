@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/*
+** Appends src to dst, writing at most size - 1 - dst_len characters and
+** always NUL-terminating (when size > 0). The "i + 1 < size" condition
+** reserves one byte for the '\0'.
+** Like the real strlcat, returns the length of the string it tried to
+** create: dst_len + src_len normally, size + src_len when size is too
+** small for the whole dst (i.e. when size <= dst_len).
+*/
+
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
